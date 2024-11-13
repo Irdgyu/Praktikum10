@@ -34,7 +34,6 @@ public class BioskopWithScanner06 {
                             break;
                         }
                     }
-                
                     input6.nextLine();
                     penonton[baris-1][kolom-1] = nama;  
                     break;
