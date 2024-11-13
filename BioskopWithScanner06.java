@@ -21,10 +21,20 @@ public class BioskopWithScanner06 {
                 case 1:
                     System.out.print("Masukkan nama : ");
                     nama = input6.nextLine();
-                    System.out.print("Masukkan baris : ");
-                    baris = input6.nextInt();
-                    System.out.print("Masukkan kolom : ");
-                    kolom = input6.nextInt();
+                    while (true) {
+                        System.out.print("Masukkan baris : ");
+                        baris = input6.nextInt();
+                        System.out.print("Masukkan kolom : ");
+                        kolom = input6.nextInt();
+                        if (baris > 4 || kolom > 2) {
+                            System.out.println("Maaf tidak tersedia");
+                            continue;
+                        }
+                        else {
+                            break;
+                        }
+                    }
+                
                     input6.nextLine();
                     penonton[baris-1][kolom-1] = nama;  
                     break;
