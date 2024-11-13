@@ -30,6 +30,9 @@ public class BioskopWithScanner06 {
                             System.out.println("Maaf tidak tersedia");
                             continue;
                         }
+                        else if (penonton[baris-1][kolom-1]!= null) {
+                            System.out.println("Mohon maaf kursi sudah ditempati.\nTolong masukkan kembali!");
+                        }
                         else {
                             break;
                         }
@@ -39,6 +42,11 @@ public class BioskopWithScanner06 {
                     break;
                 case 2:
                     for (int i = 0; i < penonton.length; i ++) {
+                        for (int j = 0; j < penonton[i].length; j++) {
+                            if (penonton[i][j] == null) {
+                                penonton[i][j] = "***";
+                            }
+                        }
                         System.out.println("Penonton baris ke-" + (i+1) + " : " + String.join("\t", penonton[i]));
                     }
                     break;
